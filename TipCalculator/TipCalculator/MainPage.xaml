@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TipCalculator.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label
+                Text="Valor:"
+                />
+            <Entry
+                x:Name="ValueEntry"
+                Placeholder="Digite o valor da refeição"/>
+            <HorizontalStackLayout Spacing="10">
+                <Label
+                    Text="Gorjeta" />
+                <Label
+                    x:Name="TipLabel"
+                    Text="R$0,00" />
+                <Label
+                    Text="Valor Total"
+                    />
+                <Label
+                    x:Name="TotaLabel"
+                    Text="R$: 0,00"/>
+                <Label
+                    x:Name="PorcentagemLabel"
+                    Text="PorcentagemLabel"
+                    />
+            </HorizontalStackLayout>
+            <Slider
+                x:Name="PercentagemSlider"
+                Minimum="0"
+                Maximum="100" 
+                ValueChanged="PercentagemSlider_ValueChanged"
+                />
+            <HorizontalStackLayout>
+            <Button
+                x:Name="Button15Percent"
+                Text="15%"
+                SemanticProperties.Hint="Clique aqui se você achar que o serviço foi bom"
+                Clicked="Button15Percent_Clicked"
+                />
+
+                <Button
+                x:Name="Button30Percent"
+                Text="30%"
+                Clicked="Button30percent_Clicked"/>
+
+                <Button
+                    x:Name="BuutonRoundUp"
+                    Text="Arrendondar para cima"
+                    Clicked="ButtonRoundUp_Clicked"/>
+
+                <Button
+                    x:Name="ButtonRoundDown"
+                    Text="Arrendondar para baixo "
+                    Clicked="ButtonRoundDown_Clicked"/>
+
+            </HorizontalStackLayout>
+
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
